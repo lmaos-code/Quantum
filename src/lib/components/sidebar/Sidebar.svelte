@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { omniboxVisible } from '$lib/stores';
+</script>
+
 <div id="sidebar">
 	<a href="/">
 		<div id="Logo">
@@ -7,7 +11,22 @@
 
 	<div id="upper">
 		<ul class="iconlist">
-			<li>
+			<a href="/">
+				<li>
+					<div><img src="assets/home.svg" alt="" /></div>
+					Home
+				</li>
+			</a>
+			<li
+				on:click={() => {
+					omniboxVisible.update((n) => (n = !n));
+				}}
+				on:keydown={(e) => {
+					if (e.key.toLocaleLowerCase() === 's') {
+						omniboxVisible.update((n) => (n = !n));
+					}
+				}}
+			>
 				<div><img src="assets/search.svg" alt="" /></div>
 				Search
 			</li>
@@ -16,10 +35,6 @@
 
 	<div id="lower">
 		<ul class="iconlist">
-			<li>
-				<div><img src="assets/home.svg" alt="" /></div>
-				Home
-			</li>
 			<li>
 				<div><img src="assets/profile.svg" alt="" /></div>
 				Profile
@@ -43,7 +58,6 @@
 		flex-direction: column;
 
 		.iconlist {
-			width: 80%;
 			margin: 0 auto;
 			li {
 				display: flex;
@@ -51,6 +65,7 @@
 				justify-content: flex-start;
 				margin: 1vh 0px;
 				font-size: 1.5em;
+				cursor: pointer;
 				div {
 					height: 2.5em;
 					width: 5vh;
@@ -66,6 +81,9 @@
 	ul {
 		padding: 0px;
 		width: 100%;
+	}
+	#lower {
+		margin-top: auto;
 	}
 	li {
 		list-style: none;
