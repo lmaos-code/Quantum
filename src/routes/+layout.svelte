@@ -1,5 +1,6 @@
 <script>
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
+	import '../style.scss'
 </script>
 
 <div id="app">
