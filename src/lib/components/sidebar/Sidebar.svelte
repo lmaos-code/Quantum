@@ -53,9 +53,11 @@
 		width: 25vw;
 		background-color: #ffffff;
 		padding: 0px 1.5vh;
-
 		display: flex;
 		flex-direction: column;
+		a:visited {
+			color: initial;
+		}
 
 		.iconlist {
 			margin: 0 auto;
