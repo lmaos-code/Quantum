@@ -1,5 +1,5 @@
-use reqwest::{Error, Response};
 
+use reqwest::{Error, Response};
 async fn make_request(url: &str, method: &str, body: Option<&str>) -> Result<Response, Error> {
     let client = reqwest::Client::new();
     let request_builder = match method {
@@ -16,4 +16,10 @@ async fn make_request(url: &str, method: &str, body: Option<&str>) -> Result<Res
     };
     let response = request_builder.send().await?;
     Ok(response)
+}
+
+#[tauri::command]
+pub async fn get(url: String) -> Result<Response, Error> {
+    print!("GET {}", url);
+    make_request(&url, "GET", None).await
 }
