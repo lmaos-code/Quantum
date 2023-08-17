@@ -21,19 +21,26 @@ struct ContentView: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
                     } label: {
                         Text(item.timestamp!, formatter: itemFormatter)
+                    }.contextMenu() {
+                        Button(action: {
+                            deleteItems(offsets: [items.firstIndex(of: item)!])
+                        }) {
+                            Label("Delete Item", systemImage: "trash")
+                        }
                     }
+                
                 }
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                    ToolbarItem {
+                        Button(action: addItem) {
+                            Label("Delete Item", systemImage: "plus")
+                        }
                     }
-                }
             }
             Text("Select an item")
         }
