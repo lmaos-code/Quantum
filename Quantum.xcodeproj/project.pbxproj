@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3209C0E02A92A87F00D7FAAD /* Get in Frameworks */ = {isa = PBXBuildFile; productRef = 3209C0DF2A92A87F00D7FAAD /* Get */; };
+		3209C0E22A92A89800D7FAAD /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209C0E12A92A89800D7FAAD /* API.swift */; };
+		3209C0E42A92B3F100D7FAAD /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209C0E32A92B3F100D7FAAD /* News.swift */; };
+		3209C0E62A92B9DC00D7FAAD /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3209C0E52A92B9DC00D7FAAD /* NewsView.swift */; };
 		32E3961F2A7DA71B000C645B /* QuantumApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3961E2A7DA71B000C645B /* QuantumApp.swift */; };
 		32E396212A7DA71B000C645B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E396202A7DA71B000C645B /* ContentView.swift */; };
 		32E396232A7DA71C000C645B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E396222A7DA71C000C645B /* Assets.xcassets */; };
@@ -36,6 +40,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3209C0E12A92A89800D7FAAD /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		3209C0E32A92B3F100D7FAAD /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		3209C0E52A92B9DC00D7FAAD /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		32E3961B2A7DA71B000C645B /* Quantum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quantum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E3961E2A7DA71B000C645B /* QuantumApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantumApp.swift; sourceTree = "<group>"; };
 		32E396202A7DA71B000C645B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3209C0E02A92A87F00D7FAAD /* Get in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,12 +108,15 @@
 			isa = PBXGroup;
 			children = (
 				32E3961E2A7DA71B000C645B /* QuantumApp.swift */,
+				3209C0E12A92A89800D7FAAD /* API.swift */,
 				32E396202A7DA71B000C645B /* ContentView.swift */,
+				3209C0E52A92B9DC00D7FAAD /* NewsView.swift */,
 				32E396222A7DA71C000C645B /* Assets.xcassets */,
 				32E396272A7DA71C000C645B /* Persistence.swift */,
 				32E3962C2A7DA71C000C645B /* Quantum.entitlements */,
 				32E396292A7DA71C000C645B /* Quantum.xcdatamodeld */,
 				32E396242A7DA71C000C645B /* Preview Content */,
+				3209C0E32A92B3F100D7FAAD /* News.swift */,
 			);
 			path = Quantum;
 			sourceTree = "<group>";
@@ -151,6 +162,9 @@
 			dependencies = (
 			);
 			name = Quantum;
+			packageProductDependencies = (
+				3209C0DF2A92A87F00D7FAAD /* Get */,
+			);
 			productName = Quantum;
 			productReference = 32E3961B2A7DA71B000C645B /* Quantum.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +237,9 @@
 				Base,
 			);
 			mainGroup = 32E396122A7DA71B000C645B;
+			packageReferences = (
+				3209C0DE2A92A87F00D7FAAD /* XCRemoteSwiftPackageReference "Get" */,
+			);
 			productRefGroup = 32E3961C2A7DA71B000C645B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,9 +282,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3209C0E42A92B3F100D7FAAD /* News.swift in Sources */,
 				32E396282A7DA71C000C645B /* Persistence.swift in Sources */,
 				32E396212A7DA71B000C645B /* ContentView.swift in Sources */,
+				3209C0E62A92B9DC00D7FAAD /* NewsView.swift in Sources */,
 				32E3961F2A7DA71B000C645B /* QuantumApp.swift in Sources */,
+				3209C0E22A92A89800D7FAAD /* API.swift in Sources */,
 				32E3962B2A7DA71C000C645B /* Quantum.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3209C0DE2A92A87F00D7FAAD /* XCRemoteSwiftPackageReference "Get" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Get";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3209C0DF2A92A87F00D7FAAD /* Get */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3209C0DE2A92A87F00D7FAAD /* XCRemoteSwiftPackageReference "Get" */;
+			productName = Get;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		32E396292A7DA71C000C645B /* Quantum.xcdatamodeld */ = {
