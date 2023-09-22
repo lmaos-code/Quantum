@@ -1,38 +1,19 @@
-# create-svelte
+![Quantum Header](src/lib/assets/quantum_text.svg)
+_Your favorite Trading Companion_
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Quantum is an open source web app that uses SvelteKit and D3 to give trading recommendations based on stock market data from Alpha Vantage. Quantum provides a user-friendly interface for viewing and analyzing stock data, and it also provides a variety of tools for generating trading recommendations.
+<hr>
+Features:
 
-## Creating a project
+- Real-time stock data from Alpha Vantage (comming soon - TM)
+- Interactive charts and graphs (comming soon - TM)
+- Technical analysis indicators (comming soon - TM)
+- Trading recommendation algorithms (comming soon - TM)
 
-If you're seeing this, you've probably already done this step. Congrats!
+Get real-time stock data and market insights
+Use technical analysis indicators to identify trading opportunities
+Generate trading recommendations based on your own risk tolerance and investment goals
+Make informed trading decisions
+How to Use
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+To use Quantum, simply visit the website and enter the ticker symbol of the stock you want to analyze. Quantum will display the real-time stock data, as well as a variety of charts and graphs. You can also use Quantum to generate trading recommendations based on your own risk tolerance and investment goals.
