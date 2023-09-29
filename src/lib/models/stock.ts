@@ -1,32 +1,29 @@
-import Rest from '$lib/helpers/rest';
-import ChartData from './chartData';
+import type ChartData from './chartData';
 
 export class Stock {
-	// meta
-	rest: Rest;
-
-	// data
-	id: number;
-	name: string;
-	symbol: string;
-	sector?: string;
-	chartData: ChartData; // TODO: Fix this type
-
-	constructor(name?: string, id?: number, symbol?: string, sector?: string, cData?: ChartData) {
-		this.rest = new Rest();
-		this.id = id || 0;
-		this.name = name || '';
-		this.symbol = symbol || '';
-		this.sector = sector || '';
-		this.chartData = cData || new ChartData(this.id);
-		if (this.id == 0) this.getSelf();
+	constructor(
+		readonly name?: string,
+		readonly symbol?: string,
+		private sector?: string,
+		readonly currency?: string, //  TODO: Add a currency type.
+		private cData?: ChartData
+	) {
+		if (this.symbol == undefined) {
+			this.getSelf();
+		}
 	}
 
 	async getSelf(): Promise<Stock> {
-		return this.rest.get<Stock>(`/stock/${this.id}`).then((res) => {
-			res.rest = new Rest();
-			res.chartData = new ChartData(res.id);
-			return res;
-		});
+		return new Stock(); // TODO: Fix this.
+		/**This first needs to go to a InformationResolver, that then chooses based on env vars which StockSerive to use. Or this could */
+	}
+
+	get currentPrice(): number {
+		if (this.cData == undefined) return -1;
+		return this.cData.currentPrice();
+	}
+	get changeToday(): number {
+		if (this.cData == undefined) return -1;
+		return this.cData.currentChange();
 	}
 }

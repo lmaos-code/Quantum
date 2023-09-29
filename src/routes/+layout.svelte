@@ -16,5 +16,5 @@
 		display: flex;
 		flex-direction: column;
 		background-color: #393939;
-	}	
+	}
 </style>

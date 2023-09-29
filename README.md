@@ -2,6 +2,7 @@
 _Your favorite Trading Companion_
 
 Quantum is an open source web app that uses SvelteKit and D3 to give trading recommendations based on stock market data from Alpha Vantage. Quantum provides a user-friendly interface for viewing and analyzing stock data, and it also provides a variety of tools for generating trading recommendations.
+
 <hr>
 Features:
 
