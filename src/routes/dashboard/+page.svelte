@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Sidebar from '$lib/components/Sidebar.svelte';
-	import StockHeader from '$lib/components/StockHeader.svelte';
-	import StockChart from '$lib/components/StockChart.svelte';
-	import StockDetails from '$lib/components/StockDetails.svelte';
+	import Portfolio from '$lib/components/Portfolio.svelte';
+	import StockList from '$lib/components/StockList.svelte';
 </script>
 
 <div class="flex min-h-screen bg-gray-100">
@@ -10,14 +9,14 @@
 
 	<main class="flex-1 ml-72 p-8">
 		<div class="max-w-7xl mx-auto">
-			<StockHeader />
+			<h1 class="text-4xl font-bold mb-8">Dashboard</h1>
 
-			<div class="grid grid-cols-3 gap-6 mt-6">
+			<div class="grid grid-cols-3 gap-6">
 				<div class="col-span-2">
-					<StockChart />
+					<Portfolio />
 				</div>
 				<div class="col-span-1">
-					<StockDetails />
+					<StockList />
 				</div>
 			</div>
 		</div>
